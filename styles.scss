@@ -2,10 +2,14 @@
 
 $black: #000000;
 $softBlack1: #212121;
+$softBlack2: #272727;
 $white: #ffffff;
+$aqua: #009490;
 $aquaLight: #03cec9;
 $grey: #d1d1d1;
-$darkpurple: #1e1325;
+$darkGrey: #6b6b6b;
+$greyLight: #d9d9d9;
+$darkPurple: #1e1325;
 
 body {
   color: $white;
@@ -13,6 +17,10 @@ body {
   background-color: $softBlack1;
   font-size: 17px;
   font-weight: 400;
+}
+
+.aqua {
+  color: $aqua;
 }
 
 .aqualight {
@@ -106,7 +114,7 @@ a {
   // height: 100vh;
 }
 
-.discover__content {
+.discover__body {
   align-items: center;
   display: flex;
 }
@@ -175,7 +183,7 @@ a {
   img {
     width: 100%;
     height: 591px;
-    object-fit: none;
+    object-fit: cover;
   }
 }
 
@@ -232,6 +240,11 @@ a {
 
 //------ explore
 
+.explore {
+  background: url(images/ExploreBackground.png) no-repeat;
+  background-size: cover;
+}
+
 .explore__container {
   padding: 79px 15px 32px 15px;
 }
@@ -263,7 +276,7 @@ a {
 }
 
 .explore__button {
-  background: $darkpurple url(images/explorearrow.svg) center no-repeat;
+  background: $darkPurple url(images/explorearrow.svg) center no-repeat;
   top: 3px;
   right: 4px;
   position: absolute;
@@ -295,6 +308,127 @@ a {
   margin: 72px 0px 46px 0px;
 }
 
+.explore__more {
+  display: block;
+  margin: 0 auto;
+  max-width: 102px;
+  font-size: 21px;
+  position: relative;
+  line-height: 1.5;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    top: 100%;
+    left: 0;
+    background-color: $white;
+    height: 1px;
+    transition: ease 0.2s;
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+//------ services
+
+.services {
+  background-color: $greyLight;
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.services__container {
+  padding: 62px 0px 107px 0px;
+}
+
+.services__cards {
+  gap: 20px;
+  margin-top: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.services__card {
+  padding: 15px 0px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.services__number {
+  color: $darkGrey;
+  font-size: 61px;
+  font-weight: 700;
+  font-family: "JetBrains Mono";
+}
+
+.services__img {
+  overflow: hidden;
+  max-width: 259px;
+  max-height: 270px;
+  border-radius: 11px;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 270px;
+  }
+}
+
+.services__supcard {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  display: flex;
+  gap: 13px;
+  flex-direction: column;
+  padding: 15px 15px 15px 13px;
+  background-color: $darkPurple;
+  border-radius: 4px;
+}
+
+.services__supcard-suptitle {
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.services__supcard-text {
+  font-size: 13px;
+  max-width: 180px;
+}
+
+//------ flight
+
+.flight {
+  background-color: $softBlack2;
+}
+
+.flight__body {
+  display: flex;
+}
+
+.flight__img {
+  flex: 0 1 53%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.flight__forms {
+  flex: 0 1 47%;
+}
+
 //----------------------------------------------------------------------- MEDIA
 
 // TABLET
@@ -321,6 +455,29 @@ a {
   }
 }
 
-// @media (max-width: 767.98px) {
+@media (max-width: 767.98px) {
+  .discover {
+    height: 100vh;
+  }
 
-// }
+  .discover__first {
+    text-align: center;
+    flex: 0 1 100%;
+  }
+
+  .discover__body {
+    // flex-direction: column;
+    height: 100%;
+    align-items: center;
+    // justify-content: center;
+  }
+
+  .discover__second {
+    display: none;
+    // flex: 0 1 100%;
+  }
+
+  .services__number {
+    display: none;
+  }
+}
