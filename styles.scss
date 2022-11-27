@@ -39,6 +39,11 @@ h2 {
   font-weight: 700;
 }
 
+h3 {
+  font-size: 34px;
+  font-weight: 500;
+}
+
 a {
   color: $white;
 }
@@ -230,6 +235,10 @@ a {
   background-color: $grey;
 }
 
+.partners__item {
+  padding: 10px;
+}
+
 .partners__container {
   display: flex;
   flex-wrap: wrap;
@@ -308,7 +317,7 @@ a {
   margin: 72px 0px 46px 0px;
 }
 
-.explore__more {
+.more {
   display: block;
   margin: 0 auto;
   max-width: 102px;
@@ -416,6 +425,13 @@ a {
   display: flex;
 }
 
+.flight__wrapper {
+  padding: 40px 0px 54px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .flight__img {
   flex: 0 1 53%;
   img {
@@ -427,6 +443,12 @@ a {
 
 .flight__forms {
   flex: 0 1 47%;
+  h3 {
+    margin-bottom: 75px;
+  }
+  span {
+    font-weight: 600;
+  }
 }
 
 //----------------------------------------------------------------------- MEDIA
@@ -477,7 +499,7 @@ a {
     // flex: 0 1 100%;
   }
 
-  .services__number {
-    display: none;
-  }
+  // .services__number {
+  //   display: none;
+  // }
 }
