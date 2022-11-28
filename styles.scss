@@ -4,10 +4,12 @@ $black: #000000;
 $softBlack1: #212121;
 $softBlack2: #272727;
 $white: #ffffff;
+$darkaqua: #006360;
 $aqua: #009490;
 $aquaLight: #03cec9;
 $grey: #d1d1d1;
 $darkGrey: #6b6b6b;
+$darkGrey2: #494747;
 $greyLight: #d9d9d9;
 $darkPurple: #1e1325;
 
@@ -426,14 +428,14 @@ a {
 }
 
 .flight__wrapper {
-  padding: 40px 0px 54px 0px;
+  padding: 40px 20px 44px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .flight__img {
-  flex: 0 1 53%;
+  flex: 0 1 50%;
   img {
     width: 100%;
     height: 100%;
@@ -442,12 +444,154 @@ a {
 }
 
 .flight__forms {
-  flex: 0 1 47%;
+  margin: auto;
+  flex: 0 1 50%;
   h3 {
     margin-bottom: 75px;
+    span {
+      font-weight: 600;
+    }
   }
-  span {
-    font-weight: 600;
+}
+
+.flight__forms-body {
+  border: 1px dashed $white;
+  border-radius: 25px;
+  width: 100%;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 43px 66px 26px 66px;
+}
+
+.flight__input {
+  height: 45px;
+  color: #c6c6c6;
+  font-size: 15px;
+  border: 3px solid $darkGrey2;
+  border-radius: 7px;
+  background: transparent;
+  padding: 5px 0px 5px 65px;
+  transition: all ease 0.3s;
+  &:hover,
+  &:focus {
+    border-color: $darkGrey;
+  }
+
+  &::placeholder {
+    color: #c6c6c6;
+  }
+}
+
+.flight__radio-input {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  &:checked + .flight__radio {
+    background-color: $white;
+  }
+  &:hover:not(:checked) + .flight__radio {
+    filter: brightness(0.7);
+  }
+}
+
+.flight__radios {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.flight__radio-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.flight__radio {
+  border: 1px solid $white;
+  border-radius: 50%;
+  width: 21px;
+  height: 21px;
+  transition: all ease-in-out 0.3s;
+}
+
+.flight__from-to {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  input {
+    background: url(images/location-tick.svg) no-repeat top 50% left 14px;
+  }
+}
+
+.flight__from {
+  flex: 0 1 100%;
+}
+
+.flight__to {
+  flex: 0 1 100%;
+}
+
+.halfboxes {
+  > * {
+    flex: 0 1 50%;
+    max-width: 184px;
+    // padding: 11px 0px 11px 45px;
+  }
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.flight__depart-return {
+  input {
+    padding-left: 14px;
+    flex-direction: row-reverse;
+    gap: 27px;
+  }
+}
+
+.flight__passengers-class {
+  .select__item {
+    position: relative;
+    > * {
+      width: 100%;
+    }
+  }
+  .select-arrow {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 16px;
+    pointer-events: none;
+    right: 11px;
+  }
+  select {
+    appearance: none;
+  }
+}
+
+.flight__passengers {
+  padding-left: 45px;
+  background: url(images/Passengers.svg) no-repeat top 50% left 14px;
+}
+
+.flight__class {
+  padding-left: 60px;
+  background: url(images/Class.svg) no-repeat top 50% left 14px;
+}
+
+.flight__button {
+  width: 100%;
+  background-color: $darkaqua;
+  padding: 17px;
+  color: $white;
+  border-radius: 5px;
+  transition: ease 0.5s;
+  &:hover {
+    background-color: $aqua;
   }
 }
 
@@ -474,6 +618,18 @@ a {
     display: flex;
     justify-content: center;
     flex: 0 1 50%;
+  }
+
+  .flight {
+    background: $black;
+  }
+
+  .flight__img {
+    display: none;
+  }
+
+  .flight__forms {
+    flex: 0 1 100%;
   }
 }
 
