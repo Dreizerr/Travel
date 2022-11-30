@@ -639,7 +639,9 @@ a {
 }
 
 .flight__radios {
+  gap: 15px;
   width: 100%;
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-around;
 }
@@ -664,15 +666,9 @@ a {
   gap: 30px;
 }
 .flight__from-to input {
+  width: 100%;
+  flex: 0 1 100%;
   background: url(images/location-tick.svg) no-repeat top 50% left 14px;
-}
-
-.flight__from {
-  flex: 0 1 100%;
-}
-
-.flight__to {
-  flex: 0 1 100%;
 }
 
 .halfboxes {
