@@ -29,6 +29,22 @@ body {
   color: $aquaLight;
 }
 
+.button {
+  font-size: 15px;
+  background-color: $darkaqua;
+  padding: 17px;
+  color: $white;
+  border-radius: 5px;
+  transition: ease 0.5s;
+  &:hover {
+    background-color: $aqua;
+  }
+}
+
+.button__center {
+  align-self: center;
+}
+
 h1 {
   font-size: 90px;
   color: $grey;
@@ -46,6 +62,12 @@ h3 {
   font-weight: 500;
 }
 
+h4 {
+  font-size: 23px;
+  font-weight: 600;
+  color: #f3f3f3;
+}
+
 a {
   color: $white;
 }
@@ -54,6 +76,49 @@ a {
   max-width: 1276px;
   margin: 0 auto;
   padding: 0px 15px;
+}
+
+//------ Cards
+
+.card {
+  position: relative;
+}
+
+.card__location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 19px;
+  color: #f3f3f3;
+}
+
+.card__likes {
+  z-index: 1000;
+  display: flex;
+  gap: 11px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.like {
+  background-color: #494949;
+  padding: 7px;
+  border-radius: 50%;
+}
+
+.card__likes-count {
+  font-size: 12px;
+}
+
+.card__text {
+  font-size: 12px;
+  color: $white;
+  line-height: 18px;
+}
+
+.card__button {
+  max-width: 170px;
+  height: 43px;
 }
 
 //------ header
@@ -319,22 +384,24 @@ a {
   margin: 72px 0px 46px 0px;
 }
 
-.more {
+.more__link {
   display: block;
+  text-align: center;
+}
+
+.more {
   margin: 0 auto;
-  max-width: 102px;
   font-size: 21px;
   position: relative;
-  line-height: 1.5;
   &::after {
     content: "";
     position: absolute;
     width: 0%;
-    top: 100%;
+    top: calc(100% + 1px);
     left: 0;
     background-color: $white;
     height: 1px;
-    transition: ease 0.2s;
+    transition: ease 0.5s;
   }
   &:hover {
     &::after {
@@ -351,11 +418,12 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
 .services__container {
-  padding: 62px 0px 107px 0px;
+  padding: 62px 15px 107px 15px;
 }
 
 .services__cards {
@@ -584,15 +652,101 @@ a {
 }
 
 .flight__button {
+  font-size: 17px;
   width: 100%;
-  background-color: $darkaqua;
-  padding: 17px;
-  color: $white;
-  border-radius: 5px;
+}
+
+// ------ packages
+
+.packages__container {
+  padding: 119px 15px 59px 15px;
+}
+
+.packages__description {
+  font-size: 18px;
+  margin: 8px 0px 59px 0px;
+}
+
+.packages__cards {
+  gap: 20px;
+  display: flex;
+  // flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 46px;
+}
+
+.packages__card {
+  display: flex;
+  flex-direction: column;
+  // border: 3px solid;
+  // border-image: linear-gradient(
+  //   180deg,
+  //   #009490 0%,
+  //   #fefefe 27.08%,
+  //   #006360 100%
+  // );
+  // border-image-slice: 1;
+  background: rgba(254, 245, 245, 0.09);
+  backdrop-filter: blur(39px);
+  border-radius: 10px;
+  max-width: 363px;
+  padding: 19px;
+}
+
+.packages__card-link {
   transition: ease 0.5s;
   &:hover {
-    background-color: $aqua;
+    color: $aqua;
   }
+  // position: relative;
+  // &.lower::after {
+  //   top: calc(100% + 3px);
+  // }
+  // &::after {
+  //   content: "";
+  //   height: 1px;
+  //   background-color: $white;
+  //   top: calc(100% - 1px);
+  //   left: 0;
+  //   position: absolute;
+  //   transition: ease 0.6s;
+  //   width: 0px;
+  // }
+  // &:hover::after {
+  //   width: 100%;
+  // }
+}
+
+.packages__card-img {
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 10px;
+  max-width: 324px;
+  max-height: 298px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.packages__card-title {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.packages__card-text {
+  flex: 1 1 auto;
+  margin-top: 15px;
+  margin-bottom: 24px;
+}
+
+.packages__card-button {
+  min-width: 170px;
+  padding: 10px;
+}
+
+.packages__card-likes {
+  display: none;
 }
 
 //----------------------------------------------------------------------- MEDIA
@@ -605,9 +759,9 @@ a {
       font-size: 49px;
     }
   }
-  [class*="__container"] {
-    max-width: 755px;
-  }
+  // [class*="__container"] {
+  //   max-width: 755px;
+  // }
 
   .menu,
   .join {
@@ -658,4 +812,24 @@ a {
   // .services__number {
   //   display: none;
   // }
+
+  .packages__cards {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 520px) {
+  .flight__forms-body {
+    padding: 36px 27px 34px 27px;
+  }
+
+  .halfboxes {
+    flex-wrap: wrap;
+    gap: 30px;
+    > * {
+      flex: 0 1 100%;
+      max-width: none;
+      // padding: 11px 0px 11px 45px;
+    }
+  }
 }

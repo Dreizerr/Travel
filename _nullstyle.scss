@@ -53,6 +53,8 @@ input::-ms-clear {
   display: none;
 }
 button {
+  font-size: inherit;
+  background: none;
   cursor: pointer;
 }
 button::-moz-focus-inner {
@@ -62,6 +64,8 @@ button::-moz-focus-inner {
 
 a,
 a:visited {
+  font-weight: 400;
+  font-size: inherit;
   text-decoration: none;
 }
 a:hover {
