@@ -860,6 +860,7 @@ a {
     height: 100vh;
     margin: 0;
     width: 30%;
+    min-width: 180px;
     border-radius: 0;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
