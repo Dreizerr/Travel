@@ -177,6 +177,8 @@ a {
 }
 
 .card__likes {
+  transition: all ease-in-out 0.4s;
+  position: absolute;
   z-index: 1000;
   display: flex;
   gap: 11px;
@@ -185,9 +187,16 @@ a {
 }
 
 .like {
+  transition: ease-in-out 0.4s;
   background-color: #494949;
   padding: 7px;
   border-radius: 50%;
+}
+.like.active {
+  background-color: rgb(211, 96, 96);
+}
+.like:hover:not(.active) {
+  background-color: #009490;
 }
 
 .card__likes-count {
@@ -785,14 +794,14 @@ a {
 }
 
 .packages__card-img {
+  position: relative;
   -o-object-fit: cover;
      object-fit: cover;
-  overflow: hidden;
-  border-radius: 10px;
   max-width: 324px;
   max-height: 298px;
 }
-.packages__card-img img {
+.packages__card-img > img {
+  border-radius: 10px;
   width: 100%;
   height: 100%;
 }
@@ -814,7 +823,8 @@ a {
 }
 
 .packages__card-likes {
-  display: none;
+  top: calc(100% + 12px);
+  right: 0;
 }
 
 @media (max-width: 991.98px) {
