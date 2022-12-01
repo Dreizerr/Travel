@@ -812,6 +812,9 @@ a {
   // }
 
   .like {
+    &:hover:not(.active) {
+      background-color: #494949;
+    }
   }
 
   .header {

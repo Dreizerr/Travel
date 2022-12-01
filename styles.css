@@ -834,6 +834,9 @@ a {
   h1 .discover__title-fs {
     font-size: 49px;
   }
+  .like:hover:not(.active) {
+    background-color: #494949;
+  }
   .header {
     position: fixed;
   }
