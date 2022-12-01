@@ -195,7 +195,7 @@ a {
 .like.active {
   background-color: rgb(211, 96, 96);
 }
-.like:hover:not(.active) {
+.like:hover:not(.active, :focus) {
   background-color: #009490;
 }
 
