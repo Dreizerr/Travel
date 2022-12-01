@@ -95,6 +95,10 @@ h6 {
   font-weight: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #ffffff;
   font-family: Poppins;
@@ -220,7 +224,7 @@ a {
   transition: all ease-in-out 0.3s;
 }
 .header__container a:hover:not(.menu__active) {
-  color: #03cec9;
+  color: #009490;
 }
 
 .menu {
@@ -228,10 +232,10 @@ a {
   background-color: #212121;
   border-radius: 45px;
   flex: 0 1 710px;
-  height: 100%;
 }
 
 .menu__list {
+  height: 60px;
   max-width: 644px;
   display: flex;
   align-items: center;
@@ -245,17 +249,6 @@ a {
 
 .menu__join {
   display: none;
-}
-
-.menu__active {
-  padding: 18px 35px;
-  font-weight: 600;
-  background-color: #ffffff;
-  border-radius: 45px;
-}
-.menu__active a {
-  font-weight: 600;
-  color: #000000;
 }
 
 .menu-burger {
@@ -493,8 +486,7 @@ a {
   margin: 72px 0px 46px 0px;
 }
 
-.more__link {
-  display: block;
+.more-block {
   text-align: center;
 }
 
@@ -856,6 +848,7 @@ a {
     color: #ffffff;
   }
   .menu {
+    background: rgba(0, 0, 0, 0.9);
     transition: ease 0.5s;
     height: 100vh;
     margin: 0;

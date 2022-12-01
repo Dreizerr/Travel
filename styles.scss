@@ -13,6 +13,10 @@ $darkGrey2: #494747;
 $greyLight: #d9d9d9;
 $darkPurple: #1e1325;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: $white;
   font-family: Poppins;
@@ -141,7 +145,7 @@ a {
     transition: all ease-in-out 0.3s;
   }
   a:hover:not(.menu__active) {
-    color: $aquaLight;
+    color: $aqua;
   }
 }
 
@@ -150,10 +154,10 @@ a {
   background-color: $softBlack1;
   border-radius: 45px;
   flex: 0 1 710px;
-  height: 100%;
 }
 
 .menu__list {
+  height: 60px;
   max-width: 644px;
   display: flex;
   align-items: center;
@@ -169,16 +173,16 @@ a {
   display: none;
 }
 
-.menu__active {
-  padding: 18px 35px;
-  font-weight: 600;
-  background-color: $white;
-  border-radius: 45px;
-  a {
-    font-weight: 600;
-    color: $black;
-  }
-}
+// .menu__active {
+//   padding: 18px 35px;
+//   font-weight: 600;
+//   background-color: $white;
+//   border-radius: 45px;
+//   a {
+//     font-weight: 600;
+//     color: $black;
+//   }
+// }
 
 .menu-burger {
   &.active {
@@ -422,8 +426,7 @@ a {
   margin: 72px 0px 46px 0px;
 }
 
-.more__link {
-  display: block;
+.more-block {
   text-align: center;
 }
 
@@ -830,7 +833,7 @@ a {
     &.active {
       left: 0;
     }
-    // background: rgba($color: $darkPurple, $alpha: 0.9);
+    background: rgba($color: $black, $alpha: 0.9);
     transition: ease 0.5s;
     height: 100vh;
     margin: 0;
