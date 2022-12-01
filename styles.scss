@@ -114,8 +114,8 @@ a {
   background-color: #494949;
   padding: 7px;
   border-radius: 50%;
-  &:hover:not(.active, :focus) {
-    background-color: $aqua;
+  &:hover:not(.active) {
+    background-color: #006360;
   }
 }
 
@@ -810,6 +810,9 @@ a {
   // [class*="__container"] {
   //   max-width: 755px;
   // }
+
+  .like {
+  }
 
   .header {
     position: fixed;
