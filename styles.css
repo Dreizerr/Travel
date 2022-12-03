@@ -131,6 +131,13 @@ body {
   align-self: center;
 }
 
+.section__title-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 h1 {
   font-size: 90px;
   color: #d1d1d1;
@@ -521,12 +528,6 @@ a {
 .services {
   background-color: #d9d9d9;
 }
-.services h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 
 .services__container {
   padding: 62px 15px 107px 15px;
@@ -825,6 +826,14 @@ a {
 .packages__card-likes {
   top: calc(100% + 12px);
   right: 0;
+}
+
+.recommends {
+  background-color: #f5f5f5;
+}
+
+.recommends__container {
+  padding: 65px 0px;
 }
 
 @media (max-width: 991.98px) {
