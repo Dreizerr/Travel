@@ -50,6 +50,7 @@ body {
 }
 
 .section__title-center {
+  color: $black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,6 +112,13 @@ a {
   gap: 11px;
   flex-direction: column;
   align-items: center;
+}
+
+.card__link {
+  transition: ease 0.5s;
+  &:hover {
+    color: $aqua;
+  }
 }
 
 .like {
@@ -741,30 +749,6 @@ a {
   padding: 19px;
 }
 
-.packages__card-link {
-  transition: ease 0.5s;
-  &:hover {
-    color: $aqua;
-  }
-  // position: relative;
-  // &.lower::after {
-  //   top: calc(100% + 3px);
-  // }
-  // &::after {
-  //   content: "";
-  //   height: 1px;
-  //   background-color: $white;
-  //   top: calc(100% - 1px);
-  //   left: 0;
-  //   position: absolute;
-  //   transition: ease 0.6s;
-  //   width: 0px;
-  // }
-  // &:hover::after {
-  //   width: 100%;
-  // }
-}
-
 .packages__card-img {
   position: relative;
   object-fit: cover;
@@ -782,9 +766,12 @@ a {
   margin-bottom: 10px;
 }
 
+.packages__card-location {
+  margin-bottom: 15px;
+}
+
 .packages__card-text {
   flex: 1 1 auto;
-  margin-top: 15px;
   margin-bottom: 24px;
 }
 
@@ -806,6 +793,43 @@ a {
 
 .recommends__container {
   padding: 65px 0px;
+}
+
+.recommends__title {
+  font-size: 33px;
+}
+
+.recommends__logo {
+  width: 145;
+  height: 27px;
+}
+
+.recommends__card {
+  // position: absolute;
+  padding: 30px 20px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  background: #252525;
+  border-radius: 7px;
+  max-width: 396px;
+}
+
+.recommends__card-title {
+  margin-bottom: 10px;
+}
+
+.recommends__card-location {
+  margin-bottom: 30px;
+}
+
+.recommends__card-text {
+  font-size: 13px;
+  margin-bottom: 42px;
+}
+
+.recommends__card-button {
+  padding: 10px;
+  min-width: 252px;
 }
 
 //----------------------------------------------------------------------- MEDIA

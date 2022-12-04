@@ -132,6 +132,7 @@ body {
 }
 
 .section__title-center {
+  color: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,6 +192,13 @@ a {
   gap: 11px;
   flex-direction: column;
   align-items: center;
+}
+
+.card__link {
+  transition: ease 0.5s;
+}
+.card__link:hover {
+  color: #009490;
 }
 
 .like {
@@ -787,13 +795,6 @@ a {
   padding: 19px;
 }
 
-.packages__card-link {
-  transition: ease 0.5s;
-}
-.packages__card-link:hover {
-  color: #009490;
-}
-
 .packages__card-img {
   position: relative;
   -o-object-fit: cover;
@@ -812,9 +813,12 @@ a {
   margin-bottom: 10px;
 }
 
+.packages__card-location {
+  margin-bottom: 15px;
+}
+
 .packages__card-text {
   flex: 1 1 auto;
-  margin-top: 15px;
   margin-bottom: 24px;
 }
 
@@ -834,6 +838,42 @@ a {
 
 .recommends__container {
   padding: 65px 0px;
+}
+
+.recommends__title {
+  font-size: 33px;
+}
+
+.recommends__logo {
+  width: 145;
+  height: 27px;
+}
+
+.recommends__card {
+  padding: 30px 20px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  background: #252525;
+  border-radius: 7px;
+  max-width: 396px;
+}
+
+.recommends__card-title {
+  margin-bottom: 10px;
+}
+
+.recommends__card-location {
+  margin-bottom: 30px;
+}
+
+.recommends__card-text {
+  font-size: 13px;
+  margin-bottom: 42px;
+}
+
+.recommends__card-button {
+  padding: 10px;
+  min-width: 252px;
 }
 
 @media (max-width: 991.98px) {
