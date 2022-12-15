@@ -860,6 +860,21 @@ a {
   margin-top: 50px;
 }
 
+.recommends__slider-pagination {
+  margin-top: 50px;
+  position: relative;
+}
+
+.recommends__swiper {
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    line-height: 20px;
+    font-size: 14px;
+    background-color: $aqua;
+  }
+}
+
 //----------------------------------------------------------------------- MEDIA
 
 // TABLET

@@ -42,5 +42,19 @@ for (let like of likes) {
 }
 
 new Swiper(".recommends__swiper", {
-  spaceBetween: 400,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  spaceBetween: 300,
+
+  speed: 1000,
+
+  loop: true,
 });

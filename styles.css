@@ -904,6 +904,19 @@ a {
   margin-top: 50px;
 }
 
+.recommends__slider-pagination {
+  margin-top: 50px;
+  position: relative;
+}
+
+.recommends__swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  line-height: 20px;
+  font-size: 14px;
+  background-color: #009490;
+}
+
 @media (max-width: 991.98px) {
   h1 {
     font-size: 49px;
