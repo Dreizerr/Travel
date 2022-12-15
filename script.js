@@ -41,4 +41,6 @@ for (let like of likes) {
   };
 }
 
-new Swiper(".recommends__swiper");
+new Swiper(".recommends__swiper", {
+  spaceBetween: 400,
+});

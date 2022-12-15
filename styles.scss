@@ -856,6 +856,10 @@ a {
   height: 100%;
 }
 
+.recommends__swiper {
+  margin-top: 50px;
+}
+
 //----------------------------------------------------------------------- MEDIA
 
 // TABLET
@@ -961,6 +965,21 @@ a {
 
   .flight__forms {
     flex: 0 1 100%;
+  }
+
+  .recommends__card {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .recommends__block-video {
+    padding-bottom: 50%;
+    width: 100%;
+  }
+
+  .slide-content {
+    gap: 15px;
+    flex-direction: column;
   }
 }
 
