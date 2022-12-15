@@ -41,6 +41,8 @@ for (let like of likes) {
   };
 }
 
+// ------ Sliders
+
 new Swiper(".recommends__swiper", {
   navigation: {
     nextEl: ".recommends__swiper-button-next",
@@ -48,13 +50,47 @@ new Swiper(".recommends__swiper", {
   },
 
   pagination: {
-    el: ".swiper-pagination",
+    el: ".recommends__slider-pagination",
     clickable: true,
   },
+
+  autoHeight: true,
 
   spaceBetween: 300,
 
   speed: 1000,
 
   loop: true,
+});
+
+const reviewsSlider = new Swiper(".reviews__swiper", {
+  navigation: {
+    nextEl: ".reviews__swiper-button-next",
+    prevEl: ".reviews__swiper-button-prev",
+  },
+
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+
+  pagination: {
+    el: ".review__slider-pagination",
+    type: "progressbar",
+  },
+
+  autoHeight: true,
+
+  spaceBetween: 300,
+
+  speed: 1000,
+
+  loop: true,
+});
+
+let currentSlide = document.querySelector(".swiper-num");
+
+reviewsSlider.on("slideChange", function () {
+  let currentSlidefunc = "0" + ++reviewsSlider.realIndex;
+  currentSlide.innerHTML = currentSlidefunc;
 });
