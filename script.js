@@ -43,8 +43,8 @@ for (let like of likes) {
 
 new Swiper(".recommends__swiper", {
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".recommends__swiper-button-next",
+    prevEl: ".recommends__swiper-button-prev",
   },
 
   pagination: {
