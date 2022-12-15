@@ -40,3 +40,5 @@ for (let like of likes) {
     }
   };
 }
+
+new Swiper(".recommends__swiper");
