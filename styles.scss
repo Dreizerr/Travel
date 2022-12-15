@@ -1028,9 +1028,9 @@ a {
   }
 
   .recommends__swiper-button-prev,
-.recommends__swiper-button-next {
-  display: none;
-}
+  .recommends__swiper-button-next {
+    // display: none  ;
+  }
 }
 
 @media (max-width: 767.98px) {

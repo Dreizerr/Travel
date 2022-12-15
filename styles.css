@@ -1044,10 +1044,6 @@ a {
     gap: 15px;
     flex-direction: column;
   }
-  .recommends__swiper-button-prev,
-.recommends__swiper-button-next {
-    display: none;
-  }
 }
 @media (max-width: 767.98px) {
   body {
