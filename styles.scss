@@ -1468,7 +1468,7 @@ a {
     gap: 30px;
     > * {
       flex: 0 1 100%;
-      max-width: none;
+      max-width: 100%;
       // padding: 11px 0px 11px 45px;
     }
   }
