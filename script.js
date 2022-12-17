@@ -91,6 +91,10 @@ const reviewsSlider = new Swiper(".reviews__swiper", {
 let currentSlide = document.querySelector(".swiper-num");
 
 reviewsSlider.on("slideChange", function () {
-  let currentSlidefunc = "0" + ++reviewsSlider.realIndex;
-  currentSlide.innerHTML = currentSlidefunc;
+  let currentSlidefunc = ++reviewsSlider.realIndex;
+  if (currentSlidefunc >= 10) {
+    currentSlide.innerHTML = currentSlidefunc;
+  } else {
+    currentSlide.innerHTML = "0" + currentSlidefunc;
+  }
 });

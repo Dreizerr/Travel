@@ -34,6 +34,7 @@ body {
 }
 
 .button {
+  cursor: pointer;
   font-size: 15px;
   background-color: $darkaqua;
   padding: 17px;
@@ -57,6 +58,10 @@ body {
   flex-wrap: wrap;
 }
 
+.link-blue {
+  color: #1588dc;
+}
+
 h1 {
   font-size: 90px;
   color: $grey;
@@ -78,6 +83,11 @@ h4 {
   font-size: 23px;
   font-weight: 600;
   color: #f3f3f3;
+}
+
+h5 {
+  font-size: 22px;
+  font-weight: 400;
 }
 
 a {
@@ -970,6 +980,7 @@ a {
 .reviews__card-rate {
   align-self: flex-end;
   display: flex;
+  align-items: center;
   gap: 5px;
 }
 
@@ -1005,6 +1016,228 @@ a {
   margin-left: 35px;
   font-size: 22px;
   font-family: "JetBrains Mono";
+}
+
+// ------ contact
+
+.contact {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #00706d;
+    width: 100%;
+    height: 37%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.contact__container {
+  padding: 52px 15px 0px 15px;
+}
+
+.contact__title {
+  font-size: 38px;
+  margin-bottom: 60px;
+}
+
+.contact__body {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact__form {
+  flex: 0 1 50%;
+  background: rgba(0, 0, 0, 0.76);
+  backdrop-filter: blur(40.5px);
+  border-radius: 9px 9px 0px 0px;
+  padding: 21px 38px 29px 38px;
+  max-width: 600px;
+}
+
+.contact__form-input {
+  font-weight: 400;
+  outline: none;
+  font-size: 16px;
+  color: $white;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $white;
+  background: transparent;
+  &::placeholder {
+    color: $white;
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+.contact__form-title {
+  margin-bottom: 35px;
+}
+
+.contact__form-body {
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__form-halfboxes {
+  margin-bottom: 47px;
+  padding: 0px 15px;
+  &.halfboxes {
+    > * {
+      max-width: 208px;
+    }
+  }
+}
+
+.fullboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  > * {
+    width: 100%;
+    flex: 0 1 100%;
+  }
+}
+
+.contact__form-fullboxes {
+  padding: 0px 15px;
+  margin-bottom: 35px;
+}
+
+.contact__form-textarea {
+  padding: 16px;
+  border: 1px solid $white;
+  min-height: 117px;
+  border-radius: 10px;
+  margin-bottom: 41px;
+}
+
+.contact__form-button {
+  padding: 10px;
+  width: 227px;
+}
+
+.contact__info {
+  flex: 0 1 50%;
+  max-width: 347px;
+  margin: 0 auto;
+}
+
+.contact__info-title {
+  margin-bottom: 52px;
+}
+
+.contact__info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  font-size: 18px;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.socials__links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+// ------ footer
+
+.footer {
+  background: url(images/Footer\ .png) no-repeat;
+  background-size: cover;
+  font-family: "Roboto";
+}
+
+.footer__container {
+  padding: 35px 15px 0px 15px;
+}
+
+.footer__title {
+  margin-bottom: 90px;
+}
+
+.footer__logo {
+  width: 226px;
+  filter: brightness(50%);
+}
+
+.footer__subscribe {
+  max-width: 438px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  gap: 16px;
+  margin-bottom: 90px;
+  &::before {
+    content: "Subscribe to stay";
+    position: absolute;
+    left: 0;
+    bottom: calc(100% + 25px);
+  }
+}
+
+.footer__input {
+  width: 100%;
+  padding: 14px 10px;
+  background-color: $white;
+  color: $black;
+  border-radius: 11px;
+  &::placeholder {
+    color: #c3c5c9;
+  }
+}
+
+.footer__button {
+  padding: 13px 26px;
+  border-radius: 11px;
+}
+
+.footer__rights {
+  gap: 40px;
+  line-height: 1.5;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0px 86px 35px 32px;
+  &::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: $white;
+    left: 0;
+    bottom: calc(100% + 28px);
+  }
+}
+
+.footer__copyright {
+  font-size: 12px;
+  flex: 1 1 auto;
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer__link {
+  &:hover {
+    text-decoration: underline;
+  }
+  font-size: 14px;
 }
 
 //----------------------------------------------------------------------- MEDIA
@@ -1129,6 +1362,29 @@ a {
     flex-direction: column;
   }
 
+  .contact__container {
+    padding-bottom: 50px;
+  }
+
+  .contact__body {
+    gap: 50px;
+    flex-direction: column;
+  }
+
+  .contact__info {
+    align-self: flex-start;
+    margin: 0;
+  }
+
+  .footer__rights {
+    padding: 0px 10px 35px 10px;
+    gap: 20px;
+  }
+
+  .footer__links {
+    gap: 20px;
+  }
+
   // .recommends__swiper-button-prev,
   // .recommends__swiper-button-next {
   //   // display: none  ;
@@ -1191,12 +1447,14 @@ a {
     margin: 0 auto;
   }
 
-  .reviews__card-img {
-  }
-
   .reviews__card-location {
     margin-bottom: 35px;
   }
+
+  .footer__links {
+    display: none;
+  }
+
 }
 
 @media (max-width: 520px) {
@@ -1204,7 +1462,8 @@ a {
     padding: 36px 27px 34px 27px;
   }
 
-  .halfboxes {
+  .halfboxes,
+  .contact__form-halfboxes.halfboxes {
     flex-wrap: wrap;
     gap: 30px;
     > * {
