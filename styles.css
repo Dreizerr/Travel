@@ -932,12 +932,12 @@ a {
 }
 
 .default-swiper-button-prev,
-.default-swiper-bitton-next {
+.default-swiper-button-next {
   transition: ease-in 0.3s;
   cursor: pointer;
 }
 .default-swiper-button-prev:hover,
-.default-swiper-bitton-next:hover {
+.default-swiper-button-next:hover {
   filter: brightness(125%);
 }
 
@@ -1109,6 +1109,7 @@ a {
 }
 
 .contact__form-input {
+  width: 100%;
   font-weight: 400;
   outline: none;
   font-size: 16px;
@@ -1157,7 +1158,6 @@ a {
   gap: 30px;
 }
 .fullboxes > * {
-  width: 100%;
   flex: 0 1 100%;
 }
 
