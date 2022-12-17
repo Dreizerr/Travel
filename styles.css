@@ -1401,6 +1401,9 @@ a {
   .contact__container {
     padding-bottom: 50px;
   }
+  .contact__form {
+    flex: 0 1 100%;
+  }
   .contact__body {
     gap: 50px;
     flex-direction: column;

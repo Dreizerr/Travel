@@ -1366,6 +1366,10 @@ a {
     padding-bottom: 50px;
   }
 
+  .contact__form {
+    flex: 0 1 100%;
+  }
+
   .contact__body {
     gap: 50px;
     flex-direction: column;
@@ -1454,7 +1458,6 @@ a {
   .footer__links {
     display: none;
   }
-
 }
 
 @media (max-width: 520px) {
